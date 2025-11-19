@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.9"
+services:
+  drawgheterinfrastructure:
+    build:
+      context: "/Volumes/External SSD/Projects/DrawGheterInfrastructure"
+      dockerfile: "DrawGheterInfrastructure/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net10.0/DrawGheterInfrastructure.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "drawgheterinfrastructure:dev"
+    ports: []
+    volumes:
+    - "/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure:/app:rw"
+    - "/Volumes/External SSD/Projects/DrawGheterInfrastructure:/src:rw"
+    - "/Users/fabio/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
