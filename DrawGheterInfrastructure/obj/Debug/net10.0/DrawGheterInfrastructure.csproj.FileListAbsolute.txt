@@ -31,3 +31,12 @@
 /Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/obj/Debug/net10.0/DrawGheterInfrastructure.pdb
 /Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/obj/Debug/net10.0/DrawGheterInfrastructure.genruntimeconfig.cache
 /Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/obj/Debug/net10.0/ref/DrawGheterInfrastructure.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/AWSSDK.Core.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/AWSSDK.S3.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/Pipelines.Sockets.Unofficial.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/StackExchange.Redis.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/System.IO.Hashing.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/obj/Debug/net10.0/DrawGheterInfrastructure.sourcelink.json
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/Swashbuckle.AspNetCore.Swagger.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll

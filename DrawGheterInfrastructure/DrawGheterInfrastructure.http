@@ -1,11 +1,11 @@
-@DrawGheterInfrastructure_HostAddress = http://localhost:5253
+@DrawGheterInfrastructure_HostAddress = http://localhost:5001/api
 
-GET {{DrawGheterInfrastructure_HostAddress}}/api/test/
+GET {{DrawGheterInfrastructure_HostAddress}}/test/
 Accept: application/json
 
 ###
 
-GET {{DrawGheterInfrastructure_HostAddress}}/api/test/9
+GET {{DrawGheterInfrastructure_HostAddress}}/test/9
 Accept: application/json
 
 ###
