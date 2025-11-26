@@ -9,3 +9,6 @@ GET {{DrawGheterInfrastructure_HostAddress}}/test/9
 Accept: application/json
 
 ###
+
+POST {{DrawGheterInfrastructure_HostAddress}}/user
+Accept: application/json
