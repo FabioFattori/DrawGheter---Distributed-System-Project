@@ -18,8 +18,10 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(_ =>
     ConnectionMultiplexer.Connect(builder.Configuration["Redis:Connection"]!));
 
 // PostgresSql Configuration
+var connectionStringToUse = builder.Configuration["ConnectionStringsToUse"] ?? "DefaultConnection";
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString(connectionStringToUse)));
 
 var app = builder.Build();
 

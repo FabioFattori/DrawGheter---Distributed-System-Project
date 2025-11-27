@@ -1,6 +1,7 @@
 using DrawGheterInfrastructure.Models;
 using DrawGheterInfrastructure.Repositories;
 using DrawGheterInfrastructure.Services;
+using DrawGheterInfrastructure.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace DrawGheterInfrastructure;
@@ -18,7 +19,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public static void AddServices(IServiceCollection services)
     {
         services
-            .AddScoped<UserService>()
+            .AddScoped<IUserService, UserService>()
             .AddScoped<RedisSessionService>()
             .AddScoped<SnapshotService>();
     }

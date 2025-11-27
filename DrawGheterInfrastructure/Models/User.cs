@@ -4,11 +4,11 @@ namespace DrawGheterInfrastructure.Models;
 
 public class User
 {
-    public int Id { get; init; }
+    public int Id { get; set; }
     
-    [MaxLength(20)] public required string Username { get; init; }
+    [MaxLength(50)] public required string Username { get; init; }
 
-    [MaxLength(20)] public required string Email { get; init; }
+    [MaxLength(50)] public required string Email { get; init; }
 
-    [MaxLength(25)] public required string Password { get; init; }
+    [MaxLength(30)] public required string Password { get; init; }
 }
