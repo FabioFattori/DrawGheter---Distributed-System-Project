@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DrawGheterInfrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ed2aed042b7fccd463ec1e3546e508777b8264f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a3300330247aa7c397cf2e8886ad1cc88b83d47")]
 [assembly: System.Reflection.AssemblyProductAttribute("DrawGheterInfrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DrawGheterInfrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

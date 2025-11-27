@@ -1,6 +1,8 @@
 using DrawGheterInfrastructure.Models;
 using DrawGheterInfrastructure.Repositories;
+using DrawGheterInfrastructure.Repositories.Intefaces;
 using DrawGheterInfrastructure.Services;
+using DrawGheterInfrastructure.Services.Domains;
 using DrawGheterInfrastructure.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +15,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public static void AddRepositories(IServiceCollection services)
     {
         services
-            .AddScoped<UserRepository>();
+            .AddScoped<IUserRepository, UserRepository>();
     }
 
     public static void AddServices(IServiceCollection services)

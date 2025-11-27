@@ -1,13 +1,10 @@
 using DrawGheterInfrastructure;
+using DrawGheterInfrastructure.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add Repositories
-AppDbContext.AddRepositories(builder.Services);
-// Add Services
-AppDbContext.AddServices(builder.Services);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -22,6 +19,29 @@ var connectionStringToUse = builder.Configuration["ConnectionStringsToUse"] ?? "
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString(connectionStringToUse)));
+
+// Add Identity configuration to the DbContext
+builder.Services
+    .AddIdentity<User, IdentityRole>(options =>
+    {
+        // optional: configure password rules
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 6;
+    })
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddDataProtection();
+
+// Add Repositories
+AppDbContext.AddRepositories(builder.Services);
+// Add Services
+AppDbContext.AddServices(builder.Services);
+
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
@@ -40,5 +60,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Run();

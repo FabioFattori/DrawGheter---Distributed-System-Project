@@ -4,14 +4,14 @@ namespace DrawGheterInfrastructure.Repositories;
 
 public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> where T : class
 {
-    public T Create(T entity)
+    public virtual T Create(T entity)
     {
         context.Set<T>().Add(entity);
         context.SaveChanges();
         return entity;
     }
 
-    public T Update(T entity)
+    public virtual T Update(T entity)
     {
         context.Set<T>().Attach(entity);
         context.Set<T>().Update(entity);
@@ -19,7 +19,7 @@ public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> where 
         return entity;
     }
 
-    public void Delete(int id)
+    public virtual void Delete(int id)
     {
         var entity = Show(id);
         
@@ -32,17 +32,17 @@ public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> where 
         context.SaveChanges();
     }
 
-    public T? Show(int id)
+    public virtual T? Show(int id)
     {
         return context.Set<T>().Find(id);
     }
 
-    public IEnumerable<T> GetAll()
+    public virtual IEnumerable<T> GetAll()
     {
         return context.Set<T>().ToList();
     }
 
-    public IEnumerable<T> CreateAll(IEnumerable<T> entities)
+    public virtual IEnumerable<T> CreateAll(IEnumerable<T> entities)
     {
         var listEntities = entities.ToList();
 
@@ -55,7 +55,7 @@ public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> where 
         return listEntities;
     }
 
-    public IEnumerable<T> UpdateAll(IEnumerable<T> entities)
+    public virtual IEnumerable<T> UpdateAll(IEnumerable<T> entities)
     {
         var listEntities = entities.ToList();
 
@@ -69,7 +69,7 @@ public class BaseRepository<T>(AppDbContext context) : IBaseRepository<T> where 
         return listEntities;
     }
 
-    public void DeleteAll(IEnumerable<int> ids)
+    public virtual void DeleteAll(IEnumerable<int> ids)
     {
         var listEntities = ids.ToList();
         foreach (var entityOrNull in listEntities.Select(Show).OfType<T>())

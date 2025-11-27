@@ -1,23 +1,12 @@
-using DrawGheterInfrastructure.Controllers.Dto;
-using DrawGheterInfrastructure.Services;
+using DrawGheterInfrastructure.Controllers.Dto.UserDomain;
+using DrawGheterInfrastructure.Models;
 using DrawGheterInfrastructure.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DrawGheterInfrastructure.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class UserController(IUserService userService) : Controller
+[Route("api/[controller]/[action]")]
+public class UserController(IUserService userService)
+    : BaseController<IUserService, User, CreateUserDto, UpdateUserDto>(userService)
 {
-    [HttpPost]
-    public IActionResult Create([FromBody] CreateUserDto userDto)
-    {
-        return Ok(userService.Create(userDto));
-    }
-
-    [HttpPut]
-    public IActionResult Update([FromBody] UpdateUserDto userDto)
-    {
-        return Ok(userService.Update(userDto));
-    }
 }

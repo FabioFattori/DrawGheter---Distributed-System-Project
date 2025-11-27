@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using DrawGheterInfrastructure.Models;
 
-namespace DrawGheterInfrastructure.Controllers.Dto;
+namespace DrawGheterInfrastructure.Controllers.Dto.UserDomain;
 
-public class CreateUserDto(string email, string password, string username) : IBaseDto<User>
+public class CreateUserDto(string email, string password, string username, bool rememberMe = false) : IBaseDto<User>
 {
-    [Required] 
+    [Required]
     [EmailAddress]
     [MaxLength(50)]
     public string Email { get; set; } = email;
@@ -13,6 +13,7 @@ public class CreateUserDto(string email, string password, string username) : IBa
     [Required]
     [MinLength(5)]
     [MaxLength(30)]
+    [DataType(DataType.Password)]
     public string Password { get; set; } = password;
 
     [Required]
@@ -20,14 +21,18 @@ public class CreateUserDto(string email, string password, string username) : IBa
     [MaxLength(30)]
     public string Username { get; set; } = username;
 
+    public bool RememberMe { get; set; } = rememberMe;
+
 
     public virtual User ToModel()
     {
         return new User
         {
+            Id = string.Empty,
             Email = Email,
             Password = Password,
-            Username = Username
+            Username = Username,
+            RememberMe = RememberMe
         };
     }
 
