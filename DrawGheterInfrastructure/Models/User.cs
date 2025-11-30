@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace DrawGheterInfrastructure.Models;
 
-public class User : IdentityUser
+public class User : IdentityUser<Guid>
 {
-    public override required string Id { get; set; }
+    public override required Guid Id { get; set; }
 
     [MaxLength(50)] public required string Username { get; init; }
 

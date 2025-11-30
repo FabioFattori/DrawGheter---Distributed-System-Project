@@ -28,7 +28,7 @@ public class CreateUserDto(string email, string password, string username, bool 
     {
         return new User
         {
-            Id = string.Empty,
+            Id = Guid.Empty,
             Email = Email,
             Password = Password,
             Username = Username,

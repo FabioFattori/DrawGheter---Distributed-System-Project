@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DrawGheterInfrastructure.Controllers;
 
 [ApiController]
+[Route("[action]")]
 public class BaseController<TService, TEntity, TCreateDto, TUpdateDto>(TService service) : Controller
     where TService : IBaseService<TEntity, TCreateDto, TUpdateDto>
     where TCreateDto : IBaseDto<TEntity>

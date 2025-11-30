@@ -22,7 +22,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Add Identity configuration to the DbContext
 builder.Services
-    .AddIdentity<User, IdentityRole>(options =>
+    .AddIdentity<User, IdentityRole<Guid>>(options =>
     {
         // optional: configure password rules
         options.Password.RequireNonAlphanumeric = false;

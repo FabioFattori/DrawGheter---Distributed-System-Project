@@ -140,5 +140,4 @@
 /Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 /Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 /Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Windows.Extensions.dll
-/Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll
 /Volumes/External SSD/Projects/DrawGheterInfrastructure/DrawGheterInfrastructure/bin/Debug/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
